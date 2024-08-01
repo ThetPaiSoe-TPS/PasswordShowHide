@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container">
+        <input type="password" placeholder="password" id="psd">
+            <img src="./eye-icons/eye-close.png" alt="" id="img" onclick="changeFunc()">
+        </input>
+    </div>
+
+    <script>
+        var img= document.getElementById('img');
+        var psd= document.getElementById('psd');
+        function changeFunc(){
+            if(psd.getAttribute('type')== 'password'){
+                psd.setAttribute('type', 'text');
+                img.src= ('./eye-icons/eye-open.png');
+            }
+            else{
+                psd.setAttribute('type', 'password');
+                img.src= ('./eye-icons/eye-close.png');
+            }
+        }
+    </script>
+</body>
+    
+</html>
